@@ -15,14 +15,14 @@ import view.*;
 public class PanelPantallaPrincipal {
 	
 	public void mostrarPantallaPrincipal() {
-		  // Crear el marco principal
+		  
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200, 700); // Tamaño de la ventana
+        frame.setSize(1200, 700); 
         frame.setLayout(new BorderLayout());
-        frame.getContentPane().setBackground(new Color(255, 204, 153));// Usar un BorderLayout para organizar los componentes
+        frame.getContentPane().setBackground(new Color(255, 204, 153));
        
-        // Crear un JLabel para el título y agregarlo en la parte superior (NORTH)
+        
         JLabel titleLabel = new JLabel("LIBRERIA UPTC", SwingConstants.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         frame.add(titleLabel, BorderLayout.NORTH);
@@ -35,12 +35,11 @@ public class PanelPantallaPrincipal {
         leftPanel.setLayout(new BorderLayout());
         leftPanel.setBackground(buttonPanelColor);
         leftPanel.setPreferredSize(new Dimension(200, 0));
-
-        // Agregar información al panel izquierdo usando un JLabel
-        JLabel infoLabel = new JLabel("informacion aqui");
+        
+        JLabel infoLabel = new JLabel("HECHO POR: NELSON MORENO");
         infoLabel.setHorizontalAlignment(SwingConstants.CENTER);
         leftPanel.add(infoLabel, BorderLayout.CENTER);
-        
+       
         // Crear un panel para la parte derecha con 4 botones
         JPanel rightPanel = new JPanel(new GridLayout(4, 1, 10, 10));
         rightPanel.setPreferredSize(new Dimension(200, 0));
@@ -63,7 +62,7 @@ public class PanelPantallaPrincipal {
         BibliotecaController controller = new BibliotecaController();
         button1.addActionListener(new ActionListener() {
         	
-            @Override
+            @Override 
             public void actionPerformed(ActionEvent e) {
                 SwingUtilities.invokeLater(() -> {
                 	
